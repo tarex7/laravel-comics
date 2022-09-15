@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $links = [
+        ['name'=>'characters'],
+        ['name'=>'comics'],
+        ['name'=>'movies'],
+        ['name'=>'tv'],
+        ['name'=>'games'],
+        ['name'=>'collectibles'],
+        ['name'=>'videos'],
+        ['name'=>'fans'],
+        ['name'=>'news'],
+        ['name'=>'characters'],
+        
+    ];
+    return view('home', compact('links'));
 });
