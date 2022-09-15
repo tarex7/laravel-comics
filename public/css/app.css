@@ -148,3 +148,82 @@ main .comics figcaption {
   justify-content: center;
   margin: 0 15px;
 }
+
+footer {
+  background-image: url("../images/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  padding: 40px;
+}
+footer .row {
+  display: flex;
+}
+footer .row .col {
+  margin: 0 20px;
+}
+footer .row a:hover {
+  color: #fff;
+}
+footer h3 {
+  text-transform: uppercase;
+}
+footer #logo {
+  position: absolute;
+  top: -11%;
+  left: 53%;
+  width: 650px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+footer ul li a {
+  color: gray;
+  justify-self: start;
+  margin: 5px 0;
+}
+
+#footer-bottom {
+  background-color: #303030;
+  padding: 50px;
+}
+#footer-bottom .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer-bottom .footer-content .social {
+  display: flex;
+  align-items: center;
+}
+#footer-bottom .footer-content .social h3 {
+  color: #0282f9;
+  margin-right: 10px;
+}
+#footer-bottom .footer-content .social img {
+  margin: 0 10px;
+  transition: all 0.2s;
+}
+#footer-bottom .footer-content .social img:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 15px;
+  color: #fff;
+  border: 3px solid #0282f9;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #0282f9;
+}

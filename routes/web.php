@@ -17,6 +17,36 @@ Route::get('/', function () {
     $links = config('menu');
     $comics = config('comics');
     $bannerItems = config('bannerItems');
+    $DCcomicsLinks = config('DCcomicsLinks');
+    $DClinks = config('DClinks');
+    $sites = config('sites');
 
-    return view('home', ['links' => $links, 'comics' => $comics, 'bannerItems' => $bannerItems]);
+    return view('home', 
+    [
+        'links' => $links,
+        'comics' => $comics,
+        'bannerItems' => $bannerItems,
+        'DCcomicsLinks' => $DCcomicsLinks ,
+        'DClinks' => $DClinks,
+        'sites' => $sites
+    ]);
+});
+
+Route::get('/comic', function () {
+    $links = config('menu');
+    $comics = config('comics');
+    $bannerItems = config('bannerItems');
+    $DCcomicsLinks = config('DCcomicsLinks');
+    $DClinks = config('DClinks');
+    $sites = config('sites');
+
+    return view('comic', 
+    [
+        'links' => $links,
+        'comics' => $comics,
+        'bannerItems' => $bannerItems,
+        'DCcomicsLinks' => $DCcomicsLinks ,
+        'DClinks' => $DClinks,
+        'sites' => $sites
+    ]);
 });

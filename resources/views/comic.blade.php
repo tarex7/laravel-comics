@@ -2,6 +2,6 @@
 
 @section('main-content')
 
-@include('includes.main')
+<h1>COMIC</h1>
 
 @endsection
