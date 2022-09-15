@@ -73,3 +73,8 @@ nav li a {
   margin: 0 10px;
   height: 100%;
 }
+
+.jumbotron {
+  background-image: url("../images/jumbotron.jpg");
+  height: 400px;
+}
