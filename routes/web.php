@@ -14,18 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $links = [
-        ['name'=>'characters'],
-        ['name'=>'comics'],
-        ['name'=>'movies'],
-        ['name'=>'tv'],
-        ['name'=>'games'],
-        ['name'=>'collectibles'],
-        ['name'=>'videos'],
-        ['name'=>'fans'],
-        ['name'=>'news'],
-        ['name'=>'characters'],
-        
-    ];
-    return view('home', compact('links'));
+    $links = config('menu');
+    $comics = config('comics');
+    $bannerItems = config('bannerItems');
+
+    return view('home', ['links' => $links, 'comics' => $comics, 'bannerItems' => $bannerItems]);
 });

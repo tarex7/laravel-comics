@@ -78,3 +78,73 @@ nav li a {
   background-image: url("../images/jumbotron.jpg");
   height: 400px;
 }
+
+main {
+  background-color: #1c1c1c;
+  padding: 70px;
+  color: #fff;
+}
+main .comics {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .comics .card {
+  width: 16.6666666667%;
+  margin-bottom: 50px;
+}
+main .comics .card:hover {
+  color: #0282f9;
+}
+main .comics .card:hover figure {
+  border: 3px solid #0282f9;
+}
+main .comics figure {
+  max-height: 186px;
+  max-width: 186px;
+  overflow: hidden;
+  margin: 0px;
+  border: 3px solid transparent;
+}
+main .comics figcaption {
+  text-transform: uppercase;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.banner {
+  background-color: #0282f9;
+  padding: 40px;
+}
+.banner .banner-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.banner img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.banner .media-text {
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+.banner a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.banner a:hover {
+  transform: scale(1.1);
+}
+.banner #dc-power {
+  width: 30%;
+  margin-right: 5px;
+}
+.banner .media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+}
