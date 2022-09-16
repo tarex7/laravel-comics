@@ -34,6 +34,14 @@ a {
   display: inline-block;
 }
 
+.bg-dark {
+  background-color: #1c1c1c;
+}
+
+.bg-light {
+  background-color: #fff;
+}
+
 .active {
   color: #0282f9;
   border-bottom: 8px solid #0282f9;
@@ -77,10 +85,11 @@ nav li a {
 .jumbotron {
   background-image: url("../images/jumbotron.jpg");
   height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
-  background-color: #1c1c1c;
   padding: 70px;
   color: #fff;
 }
@@ -226,4 +235,67 @@ h3 {
 .btn:hover {
   background-color: #fff;
   color: #0282f9;
+}
+
+.gallery {
+  height: 80px;
+  background-color: #0282f9;
+  position: relative;
+}
+.gallery img {
+  position: absolute;
+  bottom: 15%;
+  left: 23%;
+}
+
+.comic {
+  background-color: #fff;
+  padding: 70px 500px;
+}
+.comic .comic-details {
+  display: flex;
+}
+.comic .comic-details .card {
+  color: #000;
+  padding: 10px 50px 0 0;
+}
+.comic .comic-details .card .card-info {
+  display: flex;
+  margin-top: 20px;
+}
+.comic .comic-details .card .card-info .price {
+  background-color: #55ba59;
+  padding: 20px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.comic .comic-details .card .card-info .availability {
+  background-color: #55ba59;
+  padding: 20px;
+  font-weight: bold;
+  color: #fff;
+  width: 40%;
+  border-left: 2px solid #666;
+}
+.comic .comic-details .card .card-info span {
+  color: rgba(255, 255, 255, 0.7);
+}
+.comic .comic-details .card p {
+  line-height: 25px;
+}
+.comic .comic-details img {
+  width: 2000px;
+}
+.comic h1 {
+  color: #003f5e;
+  text-transform: uppercase;
+}
+.comic figcaption {
+  color: #444;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: end;
 }

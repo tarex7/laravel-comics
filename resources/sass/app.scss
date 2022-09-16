@@ -48,10 +48,11 @@
   .jumbotron {
     background-image: url("../images/jumbotron.jpg");
     height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
-  background-color: #1c1c1c;
   padding: 70px;
   color: #fff;
 
@@ -210,4 +211,76 @@ h3 {
     background-color: #fff;
     color: $primary-color;
   }
+}
+
+.gallery {
+  height: 80px;
+  background-color: $primary-color;
+  position: relative;
+
+
+  img {
+    position: absolute;
+    bottom: 15%;
+    left: 23%;
+  }
+}
+
+.comic {
+  background-color: #fff;
+  padding: 70px 500px;
+
+  .comic-details {
+    display: flex;
+    .card {
+      color: #000;
+      padding: 10px 50px 0 0 ;
+
+      .card-info {
+        display: flex;
+        margin-top: 20px;
+        .price {
+        background-color: #55ba59;
+        padding: 20px;
+        font-weight: bold;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        }
+
+        .availability {
+          background-color: #55ba59;
+        padding: 20px;
+        font-weight: bold;
+        color: #fff;
+        width: 40%;
+        border-left: 2px solid #666;
+        }
+        span {
+          color: rgba($color: #fff, $alpha: 0.7);
+        }
+      }
+      p {
+        line-height: 25px;
+      }
+    }
+    img {
+      width: 2000px;
+    }
+  }
+
+h1 {
+  color: #003f5e;
+  text-transform: uppercase;
+}
+
+figcaption {
+  color: #444;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: end;
+}
+
+
 }

@@ -11,10 +11,13 @@
 
 @include('includes.header')
 @include('includes.jumbo')
-<main>
+
     @yield('main-content')
-</main>
-@include('includes.banner')
+
+<div>
+    {{-- @yield('comic-content') --}}
+</div>
+
 @include('includes.footer')
 @include('includes.footer-bottom')
 
