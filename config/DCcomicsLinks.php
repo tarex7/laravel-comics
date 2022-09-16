@@ -4,52 +4,52 @@ return
 [
     [
       'text'=> "Characters",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "Comics",
-      'url'=> "#",
+      'route_name'=> "comic.show",
       'current'=> true,
     ],
     [
       'text'=> "Movies",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "TV",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "Games",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "Collectibles",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "Videos",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "Fans",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "News",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
     [
       'text'=> "Shop",
-      'url'=> "#",
+      'route_name'=> "comics.index",
       'current'=> false,
     ],
   ]

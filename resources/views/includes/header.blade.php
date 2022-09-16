@@ -9,9 +9,10 @@
           /></a>
           <div class="links">
             <ul>
-              @foreach($links as $link)
+              @foreach($DCcomicsLinks as $link)
                 <li>
-                <a href="#" class="">{{ $link['name'] }}</a>
+                <a href="{{ route($link['route_name']) }}"
+                 class="{{ Route::is($link['route_name']) ? 'active' : '' }}">{{ $link['text'] }}</a>
               </li>
               @endforeach
             </ul>

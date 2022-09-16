@@ -21,7 +21,7 @@ Route::get('/', function () {
     $DClinks = config('DClinks');
     $sites = config('sites');
 
-    return view('comics', 
+    return view('/comics.index', 
     [
         'links' => $links,
         'comics' => $comics,
@@ -33,7 +33,9 @@ Route::get('/', function () {
 
 })->name('comics.index');
 
-Route::get('/1', function () {
+
+
+Route::get('/comic', function () {
     $links = config('menu');
     $comics = config('comics');
     $bannerItems = config('bannerItems');
@@ -41,7 +43,7 @@ Route::get('/1', function () {
     $DClinks = config('DClinks');
     $sites = config('sites');
 
-    return view('comic', 
+    return view('/comics.show', 
     [
         'links' => $links,
         'comics' => $comics,
