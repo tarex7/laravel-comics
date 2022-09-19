@@ -21,6 +21,26 @@ Route::get('/', function () {
     $DClinks = config('DClinks');
     $sites = config('sites');
 
+    return view('/home', 
+    [
+        'links' => $links,
+        'comics' => $comics,
+        'bannerItems' => $bannerItems,
+        'DCcomicsLinks' => $DCcomicsLinks ,
+        'DClinks' => $DClinks,
+        'sites' => $sites
+    ]);
+
+})->name('home');
+
+Route::get('/comics', function () {
+    $links = config('menu');
+    $comics = config('comics');
+    $bannerItems = config('bannerItems');
+    $DCcomicsLinks = config('DCcomicsLinks');
+    $DClinks = config('DClinks');
+    $sites = config('sites');
+
     return view('/comics.index', 
     [
         'links' => $links,
@@ -33,9 +53,7 @@ Route::get('/', function () {
 
 })->name('comics.index');
 
-
-
-Route::get('/comic', function () {
+Route::get('/movies', function () {
     $links = config('menu');
     $comics = config('comics');
     $bannerItems = config('bannerItems');
@@ -43,7 +61,7 @@ Route::get('/comic', function () {
     $DClinks = config('DClinks');
     $sites = config('sites');
 
-    return view('/comics.show', 
+    return view('/movies.index', 
     [
         'links' => $links,
         'comics' => $comics,
@@ -52,6 +70,40 @@ Route::get('/comic', function () {
         'DClinks' => $DClinks,
         'sites' => $sites
     ]);
-})->name('comic.show');
+
+})->name('movies.index');
+
+
+
+Route::get('/comic/{id}', function ($id) {
+    $links = config('menu');
+    $comics = config('comics');
+    $bannerItems = config('bannerItems');
+    $DCcomicsLinks = config('DCcomicsLinks');
+    $DClinks = config('DClinks');
+    $sites = config('sites');
+
+    $comic = $comics[$id];
+    $artists = $comics[$id]['artists'];
+    $writers = $comics[$id]['writers'];
+    
+
+    if(!is_numeric($id) || $id < 0  || $id >= count($comics))
+        abort(404);
+    
+
+    return view('/comics.show', 
+    [
+        'links' => $links,
+        'comics' => $comics,
+        'bannerItems' => $bannerItems,
+        'DCcomicsLinks' => $DCcomicsLinks ,
+        'DClinks' => $DClinks,
+        'sites' => $sites,
+        'comic' => $comic,
+        'artists' => $artists,
+        'writers' => $writers,
+    ]);
+})->name('comics.show');
 
 
